@@ -1,20 +1,32 @@
+body, html {
+  font-family: 'Sora' , sans-serif;
+  background-color: #DAD5EC;
+  height: auto;
+}
+#arrow {
+  font-weight: bolder;
+  margin-left: 5%;
+  position: fixed;
+  cursor: pointer;
+  color: #000;
+}
 .chat-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
   }
   
   .chat-output-container {
     width: 60%;
     border-radius: 5px;
     padding: 10px;
-    height: 80%
+    height: 8cap
   }
   
   .chat-output {
     list-style: none;
-    padding: 0;
+    padding: 8%;
   }
   
   .chat-output li {
@@ -26,15 +38,24 @@
   }
   
   .chat-output .user-message {
-    background-color: #f0f0f0;
+    font-family: 'Sora' , sans-serif;
+    background-color: #000;
+    color: #FEF6D7;
     width: fit-content;
     margin-top: auto;
     margin-left: auto;
     text-align: right;
   }
-  
+  .user-message{
+    margin-left: 10%;
+  }
+  .bot-message{
+    margin-right: 10%;
+  }
   .chat-output .bot-message {
-    background-color: #e0f0e0;
+    font-family: 'Sora' , sans-serif;
+    background-color: #FEF6D7;
+    color: #000;
     width: fit-content;
     text-align: left;
   }
@@ -46,25 +67,32 @@
     flex-direction: row;
     gap: 20px;
     position: absolute;
-    padding-bottom: 10%;
+    margin-bottom: 5%;
     bottom: 0;
     width: 60%;
   }
   
   .chat-input {
+    font-family: 'Sora' , sans-serif;
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #a9a7a7;
     border-radius: 5px;
     resize: none;
   }
   
   .send-button {
-    background-color: #4CAF50;
-    color: white;
+    font-family: 'Sora' , sans-serif;
+    font-weight: 500;
+    font-size: large;
+    background-color: #000;
+    color: #fbf5dd;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .hidden {
+    display: none;
   }
   

@@ -1,5 +1,5 @@
 import './style.css'
-import 'D:/langchain/gen/generate.css'
+import '/workspaces/codeGen/generate.css'
 
 import { process } from './env'
 import OpenAI from "openai";
@@ -13,8 +13,10 @@ const openai = new OpenAI({
 const chatOutput = document.getElementById("chat-output");
 const chatInput = document.getElementById('chat-input');
 const sendButton = document.getElementById('send-button');
+const container = document.querySelector('.chat-input-container')
 
 sendButton.addEventListener("click", () => {
+  container.classList.toggle("hidden");
   const userMessage = chatInput.value;
   if (userMessage) {
     // Clear the input field
@@ -33,7 +35,11 @@ async function fetchBotReply(output) {
     messages: [
       {
         "role": "user",
-        "content": `generate code for "${output}" based on the given prompt`
+        "content": `generate code for "${output}" based on the given prompt and when asked for
+         anything outside of code tell that it is an  irrelevant question
+
+        `
+        
       },
     ],
     temperature: 0.9,

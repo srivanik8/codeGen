@@ -100,10 +100,6 @@ copyButton.addEventListener("click", function() {
   })
 });
 
-
-
-
-
 }
 
 
